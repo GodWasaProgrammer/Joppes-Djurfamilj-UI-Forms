@@ -35,16 +35,16 @@
             if (favoritefoodZ == Fav_food)
             {
                 hunger = false;
-                Console.WriteLine($"Your pet eats the{Fav_food}");
+                MessageBox.Show($"Your pet eats the{Fav_food}");
             }
             if (Fav_food != favoritefoodZ)
             {
-                Console.WriteLine("Your pet doesnt like the type of food.");
+                MessageBox.Show("Your pet doesnt like the type of food.");
             }
         }
         public virtual void Hungry_Animal()
         {
-            Console.WriteLine("oOoooooOoooOooo hungry");
+            MessageBox.Show("oOoooooOoooOooo hungry");
         }
         public Animal(string name, int Aage, string inputbreed)
         {
