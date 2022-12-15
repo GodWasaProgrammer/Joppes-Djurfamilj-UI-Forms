@@ -46,7 +46,7 @@
         public void Feed()
         {
                 pets[selector].Eat(FoodIN);
-            MessageBox.Show(pets[selector].ToString()); // iteraation check
+             
         }
         
         public override string ToString()
