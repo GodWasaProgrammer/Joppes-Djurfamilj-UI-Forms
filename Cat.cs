@@ -21,7 +21,7 @@
             }
             else if (hunger == false)
             {
-                Console.WriteLine($"The {type} plays with joppe");
+                MessageBox.Show($"The {type} plays with joppe");
                 this.hunger = true;
             }
         }
@@ -33,29 +33,26 @@
         {
             if (hunger == true)
             {
-                Console.WriteLine("Cat meows angrily while looking at you");
-                Console.WriteLine("Your kitty goes chasing mice instead.");
-                Console.WriteLine("Your Cat has a 50% chance of catching a mouse.");
+                MessageBox.Show("Cat meows angrily while looking at you");
+                MessageBox.Show("Your kitty goes chasing mice instead.");
+                MessageBox.Show("Your Cat has a 50% chance of catching a mouse.");
                 Random ProbabilityofcatchingaMouse = new Random();
                 int probabibility;
                 probabibility = ProbabilityofcatchingaMouse.Next(0, 100);
-                Console.WriteLine(probabibility);
+                MessageBox.Show(probabibility.ToString());
                 if (probabibility > 50)
                 {
-                    Console.WriteLine("meow meow your cat catches a mouse");
-                    Console.WriteLine("Your cat is fully fed");
+                    MessageBox.Show("meow meow your cat catches a mouse");
+                    MessageBox.Show("Your cat is fully fed");
                     hunger = false;
                 }
                 else if (probabibility < 50)
                 {
-                    Console.WriteLine("Your cat fails to catch anything");
-                    Console.WriteLine("Therefor he is still hungry");
+                    MessageBox.Show("Your cat fails to catch anything");
+                    MessageBox.Show("Therefor he is still hungry");
                 }
             }
-            else if (hunger == false)
-            {
-                Console.WriteLine("Your cat isnt hungry and refuses to eat.");
-            }
+            
         }
     }
 }

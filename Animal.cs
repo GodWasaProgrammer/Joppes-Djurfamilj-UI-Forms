@@ -18,16 +18,14 @@
         }
         public virtual void Interact()
         {
+            if (hunger == false)
+            {
+                MessageBox.Show("The Animal Plays with joppe");
+                hunger = true;
+            }
             if (hunger == true)
             {
                 Hungry_Animal();
-            }
-            else if (hunger == false)
-            {
-                {
-                    Console.WriteLine($"The Animal plays with joppe");
-                    hunger = true;
-                }
             }
         }
         public virtual void Eat(string favoritefoodZ)

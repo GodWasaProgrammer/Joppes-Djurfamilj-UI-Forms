@@ -32,7 +32,11 @@
                 {
                     temp.WriteLine(str);
                 }
+
+
             }
+
+            MessageBox.Show($"Your file has been written to:{filePath}");
         }
         
         public void Play()

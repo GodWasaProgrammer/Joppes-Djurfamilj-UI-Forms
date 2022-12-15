@@ -17,13 +17,13 @@
         {
             if (hunger == true)
             {
-                Console.WriteLine($"The {type} is hungry and wont play.");
-                Console.WriteLine($"The {type} Growls hungrily");
+                MessageBox.Show($"The {type} is hungry and wont play.");
+                MessageBox.Show($"The {type} Growls hungrily");
                 Hungry_Animal();
             }
             else if (hunger == false)
             {
-                Console.WriteLine($"The {type} plays with joppe");
+                MessageBox.Show($"The {type} plays with joppe");
                 hunger = true;
             }
         }

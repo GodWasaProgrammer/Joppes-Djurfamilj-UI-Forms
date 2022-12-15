@@ -6,7 +6,7 @@ namespace Joppes_Djurfamilj_UI_Forms
     {
         PetOwner MyOwner = new PetOwner();
         ListBox listbox2 = new ListBox();
-        int index;
+        
         public Form1()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace Joppes_Djurfamilj_UI_Forms
             Catnip.Name = "Catnip";
             Catnip.Size = new System.Drawing.Size(100, 25);
             Catnip.Text = "Catnip";
-            Catnip.Location = new System.Drawing.Point(300, 250);
+            Catnip.Location = new System.Drawing.Point(0, 350);
             Controls.Add(Catnip);
             Catnip.Click += new System.EventHandler(this.Catnip_Click);
 
@@ -66,14 +66,40 @@ namespace Joppes_Djurfamilj_UI_Forms
             Steak.Name = "Steak";
             Steak.Size = new System.Drawing.Size(100, 25);
             Steak.Text = "Steak";
-            Steak.Location = new System.Drawing.Point(400, 250);
+            Steak.Location = new System.Drawing.Point(0, 325);
             Controls.Add(Steak);
             Steak.Click += new System.EventHandler(this.Steak_Click);
 
+            Button Play = new Button();
+            Play.Name = "Play";
+            Play.Size = new System.Drawing.Size(125, 25);
+            Play.ForeColor = Color.AliceBlue;
+            Play.BackColor= Color.Red;
+            Play.Text = "Play with Animal";
+            Play.Location = new System.Drawing.Point(0, 225);
+            Controls.Add(Play);
+            Play.Click += new System.EventHandler(this.Play_Click);
 
+            Button WriteToFile = new Button();
+            WriteToFile.Name = "WriteToFile";
+            WriteToFile.Size = new System.Drawing.Size(125, 25);
+            WriteToFile.ForeColor = Color.AliceBlue;
+            WriteToFile.BackColor = Color.Red;
+            WriteToFile.Text = "Write To File";
+            WriteToFile.Location = new System.Drawing.Point(0, 200);
+            Controls.Add(WriteToFile);
+            WriteToFile.Click += new System.EventHandler(this.WriteToFile_Click);
 
+        }
 
+        private void WriteToFile_Click(object sender, EventArgs e)
+        {
+            MyOwner.PrintToFile();
+        }
 
+        private void Play_Click(object sender, EventArgs e)
+        {
+            MyOwner.Play();
         }
 
         private void Select_Click(object sender, EventArgs e)
@@ -82,17 +108,23 @@ namespace Joppes_Djurfamilj_UI_Forms
             MessageBox.Show($"Pet has been selected! Its name is: {MyOwner.pets[listbox2.SelectedIndex].name}");
         }
 
+#pragma warning disable CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
         private void Steak_Click(object? sender, EventArgs e)
+#pragma warning restore CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
         {
             MyOwner.FoodOUT = "Steak";
         }
 
+#pragma warning disable CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
         private void Catnip_Click(object? sender, EventArgs e)
+#pragma warning restore CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
         {
             MyOwner.FoodOUT = "Catnip";
         }
 
+#pragma warning disable CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
         private void BtnFeed_Click(object? sender, EventArgs e)
+#pragma warning restore CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
         {
             
             MyOwner.Feed();
